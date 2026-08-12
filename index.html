@@ -6,10 +6,7 @@
 
   <title>Chuck's Supermarket | Lokoja</title>
 
-  <meta
-    name="description"
-    content="Chuck's Supermarket — quality groceries, household essentials, drinks and everyday shopping in Lokoja, Kogi State."
-  >
+  <meta name="description" content="Chuck's Supermarket — groceries, beverages, household essentials and everyday shopping in Lokoja, Kogi State.">
 
   <style>
     * {
@@ -27,8 +24,8 @@
     }
 
     img {
-      display: block;
       width: 100%;
+      display: block;
     }
 
     a {
@@ -36,21 +33,20 @@
       color: inherit;
     }
 
-    button {
-      font-family: inherit;
+    .container {
+      width: 100%;
+      max-width: 1150px;
+      margin: auto;
     }
 
-    /* =========================
-       NAVIGATION
-    ========================= */
-
+    /* NAVIGATION */
     nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255,255,255,.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid #e5e9e4;
     }
@@ -93,29 +89,16 @@
       border-radius: 25px;
     }
 
-    .nav-btn:hover {
-      background: #0f5d2e;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
+    /* HERO */
     .hero {
       min-height: 720px;
-      padding: 145px 22px 80px;
-      position: relative;
-      overflow: hidden;
+      padding: 150px 22px 80px;
+      background:
+        linear-gradient(110deg, rgba(10,55,27,.92), rgba(22,115,59,.72)),
+        url("images/01-hero-chucks-storefront-day.jpg") center/cover;
       color: white;
       display: flex;
       align-items: center;
-      background:
-        linear-gradient(
-          110deg,
-          rgba(7, 43, 21, 0.92),
-          rgba(22, 115, 59, 0.72)
-        ),
-        url("images/01-hero-chucks-storefront-day.jpg") center/cover no-repeat;
     }
 
     .hero-inner {
@@ -123,15 +106,15 @@
       max-width: 1150px;
       margin: auto;
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 55px;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 60px;
       align-items: center;
     }
 
     .badge {
       display: inline-block;
-      background: rgba(255, 255, 255, 0.13);
-      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: rgba(255,255,255,.13);
+      border: 1px solid rgba(255,255,255,.25);
       padding: 8px 14px;
       border-radius: 30px;
       font-size: 13px;
@@ -167,7 +150,7 @@
       padding: 14px 23px;
       border-radius: 8px;
       font-weight: 700;
-      transition: 0.2s;
+      transition: .2s;
     }
 
     .btn-primary {
@@ -176,9 +159,8 @@
     }
 
     .btn-secondary {
-      border: 1px solid rgba(255, 255, 255, 0.45);
+      border: 1px solid rgba(255,255,255,.45);
       color: white;
-      background: rgba(255,255,255,0.05);
     }
 
     .btn:hover {
@@ -186,27 +168,19 @@
     }
 
     .hero-card {
-      background: rgba(255, 255, 255, 0.10);
-      border: 1px solid rgba(255, 255, 255, 0.20);
-      padding: 14px;
+      background: rgba(255,255,255,.11);
+      border: 1px solid rgba(255,255,255,.2);
+      padding: 28px;
       border-radius: 24px;
       backdrop-filter: blur(12px);
       overflow: hidden;
     }
 
     .hero-card-image {
-      height: 280px;
-      border-radius: 17px;
-      overflow: hidden;
-    }
-
-    .hero-card-image img {
-      height: 100%;
+      height: 250px;
       object-fit: cover;
-    }
-
-    .hero-card-content {
-      padding: 20px 14px 10px;
+      border-radius: 16px;
+      margin-bottom: 20px;
     }
 
     .hero-card h3 {
@@ -221,13 +195,13 @@
 
     .mini-stats {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
       gap: 10px;
-      margin-top: 22px;
+      margin-top: 25px;
     }
 
     .mini-stat {
-      background: rgba(0, 0, 0, 0.15);
+      background: rgba(0,0,0,.18);
       padding: 14px 8px;
       border-radius: 12px;
       text-align: center;
@@ -235,29 +209,21 @@
 
     .mini-stat strong {
       display: block;
-      font-size: 15px;
+      font-size: 20px;
     }
 
     .mini-stat small {
       color: #d8e8dc;
     }
 
-    /* =========================
-       GENERAL SECTIONS
-    ========================= */
-
+    /* SECTIONS */
     section {
       padding: 90px 22px;
     }
 
-    .container {
-      max-width: 1150px;
-      margin: auto;
-    }
-
     .section-title {
       text-align: center;
-      max-width: 650px;
+      max-width: 680px;
       margin: 0 auto 45px;
     }
 
@@ -277,17 +243,14 @@
       color: #68716b;
     }
 
-    /* =========================
-       CATEGORY CARDS
-    ========================= */
-
+    /* CATEGORIES */
     .categories {
       background: white;
     }
 
     .category-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4,1fr);
       gap: 18px;
     }
 
@@ -296,28 +259,17 @@
       border: 1px solid #e5ebe5;
       border-radius: 16px;
       overflow: hidden;
-      transition: 0.25s;
+      transition: .25s;
     }
 
     .category:hover {
       transform: translateY(-6px);
       border-color: #b7d8c0;
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
     }
 
-    .category-image {
-      height: 180px;
-      overflow: hidden;
-    }
-
-    .category-image img {
-      height: 100%;
+    .category img {
+      height: 175px;
       object-fit: cover;
-      transition: 0.3s;
-    }
-
-    .category:hover .category-image img {
-      transform: scale(1.05);
     }
 
     .category-content {
@@ -334,67 +286,14 @@
       font-size: 13px;
     }
 
-    /* =========================
-       STORE GALLERY
-    ========================= */
-
-    .gallery {
-      background: #ffffff;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .gallery-item {
-      position: relative;
-      height: 270px;
-      border-radius: 17px;
-      overflow: hidden;
-      background: #e8eee9;
-    }
-
-    .gallery-item.large {
-      height: 360px;
-    }
-
-    .gallery-item img {
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.35s ease;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.06);
-    }
-
-    .gallery-caption {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      padding: 30px 18px 16px;
-      color: white;
-      background: linear-gradient(
-        transparent,
-        rgba(0, 0, 0, 0.75)
-      );
-      font-weight: 700;
-    }
-
-    /* =========================
-       PRODUCTS
-    ========================= */
-
+    /* PRODUCTS */
     .products {
       background: #f7f8f5;
     }
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4,1fr);
       gap: 18px;
     }
 
@@ -403,28 +302,27 @@
       border: 1px solid #e6e9e6;
       border-radius: 16px;
       overflow: hidden;
-      transition: 0.25s;
+      transition: .25s;
     }
 
     .product:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+      box-shadow: 0 12px 30px rgba(0,0,0,.07);
     }
 
     .product-img {
-      height: 210px;
+      height: 205px;
       overflow: hidden;
-      background: #edf3ed;
     }
 
     .product-img img {
       height: 100%;
       object-fit: cover;
-      transition: 0.3s;
+      transition: .3s;
     }
 
     .product:hover .product-img img {
-      transform: scale(1.05);
+      transform: scale(1.04);
     }
 
     .product-info {
@@ -444,14 +342,57 @@
       color: #16733b;
       font-weight: 800;
       font-size: 16px;
+      margin-bottom: 14px;
     }
 
-    /* =========================
-       ABOUT
-    ========================= */
+    .order-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: #16733b;
+      color: white;
+      padding: 11px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: .2s;
+    }
 
-    .about {
+    .order-btn:hover {
+      background: #0f5c2d;
+    }
+
+    /* GALLERY */
+    .gallery {
       background: white;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
+    }
+
+    .gallery-item {
+      border-radius: 18px;
+      overflow: hidden;
+      height: 245px;
+      background: #eee;
+    }
+
+    .gallery-item img {
+      height: 100%;
+      object-fit: cover;
+      transition: .3s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+    /* ABOUT */
+    .about {
+      background: #f7f8f5;
     }
 
     .about-grid {
@@ -462,10 +403,9 @@
     }
 
     .about-image {
-      height: 520px;
+      height: 470px;
       border-radius: 24px;
       overflow: hidden;
-      box-shadow: 0 18px 45px rgba(0,0,0,0.10);
     }
 
     .about-image img {
@@ -493,15 +433,13 @@
 
     .check span {
       color: #16733b;
-      font-weight: 900;
     }
 
-    /* =========================
-       CTA
-    ========================= */
-
+    /* CTA */
     .cta {
-      background: #176f39;
+      background:
+        linear-gradient(rgba(23,111,57,.94), rgba(23,111,57,.94)),
+        url("images/02-storefront-evening.jpg") center/cover;
       color: white;
       text-align: center;
     }
@@ -517,60 +455,114 @@
       color: #dcecdf;
     }
 
-    /* =========================
-       CONTACT
-    ========================= */
-
+    /* CONTACT */
     .contact {
       background: #f7f8f5;
     }
 
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
     }
 
     .contact-card {
       background: white;
       border: 1px solid #e4e9e4;
-      border-radius: 16px;
-      padding: 30px 25px;
-      text-align: center;
-      transition: 0.2s;
-    }
-
-    .contact-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-    }
-
-    .contact-card .icon {
-      width: 55px;
-      height: 55px;
-      display: grid;
-      place-items: center;
-      margin: 0 auto 15px;
-      background: #e4f2e7;
-      color: #16733b;
-      border-radius: 50%;
-      font-size: 20px;
-      font-weight: 800;
+      border-radius: 20px;
+      padding: 30px;
     }
 
     .contact-card h3 {
-      margin-bottom: 5px;
+      font-size: 26px;
+      margin-bottom: 10px;
     }
 
-    .contact-card p {
+    .contact-card > p {
       color: #717a74;
+      margin-bottom: 22px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 15px 0;
+      border-bottom: 1px solid #edf0ed;
+    }
+
+    .contact-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #e7f3e9;
+      display: grid;
+      place-items: center;
+      font-size: 21px;
+      flex-shrink: 0;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .contact-item span {
+      color: #707870;
       font-size: 14px;
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
 
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 17px;
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: .2s;
+    }
+
+    .contact-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+    }
+
+    .call-btn {
+      background: #16733b;
+      color: white;
+    }
+
+    .email-btn {
+      background: #222;
+      color: white;
+    }
+
+    .map-btn {
+      background: #f0a500;
+      color: white;
+    }
+
+    .demo-note {
+      display: block;
+      margin-top: 18px;
+      color: #8a918c;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    /* FOOTER */
     footer {
       background: #102017;
       color: #aebbb2;
@@ -590,19 +582,11 @@
       color: white;
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 900px) {
+    /* MOBILE */
+    @media (max-width: 800px) {
 
       .nav-links {
-        gap: 12px;
-      }
-
-      .hero-inner,
-      .about-grid {
-        grid-template-columns: 1fr;
+        display: none;
       }
 
       .hero {
@@ -610,59 +594,26 @@
         padding-top: 125px;
       }
 
+      .hero-inner,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
       .hero-card {
         margin-top: 15px;
       }
 
       .category-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
       }
 
       .product-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
       }
 
       .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-image {
-        height: 400px;
-      }
-    }
-
-    @media (max-width: 650px) {
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        padding-top: 115px;
-      }
-
-      .hero h1 {
-        font-size: 45px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .hero-card-image {
-        height: 230px;
-      }
-
-      .mini-stats {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 70px 18px;
+        grid-template-columns: repeat(2,1fr);
       }
 
       .section-title h2,
@@ -670,23 +621,43 @@
         font-size: 32px;
       }
 
+      .about-image {
+        height: 350px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
       .category-grid,
-      .product-grid,
       .gallery-grid {
         grid-template-columns: 1fr;
       }
 
-      .gallery-item,
-      .gallery-item.large {
-        height: 300px;
+      .hero h1 {
+        font-size: 45px;
       }
 
-      .about-image {
-        height: 350px;
+      .mini-stats {
+        grid-template-columns: 1fr;
       }
 
-      .cta h2 {
-        font-size: 34px;
+      .hero-buttons,
+      .contact-buttons {
+        flex-direction: column;
+      }
+
+      .btn,
+      .contact-btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .gallery-item {
+        height: 260px;
       }
     }
   </style>
@@ -694,10 +665,7 @@
 
 <body>
 
-  <!-- =========================
-       NAVIGATION
-  ========================= -->
-
+  <!-- NAVIGATION -->
   <nav>
     <div class="nav-inner">
 
@@ -707,7 +675,7 @@
 
       <div class="nav-links">
         <a href="#shop">Shop</a>
-        <a href="#gallery">Store</a>
+        <a href="#gallery">Gallery</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <a href="#contact" class="nav-btn">Order Now</a>
@@ -717,10 +685,7 @@
   </nav>
 
 
-  <!-- =========================
-       HERO
-  ========================= -->
-
+  <!-- HERO -->
   <header class="hero">
 
     <div class="hero-inner">
@@ -728,7 +693,7 @@
       <div>
 
         <div class="badge">
-          Lokoja, Kogi State
+          📍 Lokoja, Kogi State
         </div>
 
         <h1>
@@ -737,9 +702,8 @@
         </h1>
 
         <p>
-          Welcome to Chuck's Supermarket — your convenient
-          destination for groceries, household essentials,
-          drinks and everyday shopping.
+          Welcome to Chuck's Supermarket — your convenient destination
+          for groceries, household essentials, drinks and everyday shopping.
         </p>
 
         <div class="hero-buttons">
@@ -759,41 +723,36 @@
 
       <div class="hero-card">
 
-        <div class="hero-card-image">
-          <img
-            src="images/02-storefront-evening.jpg"
-            alt="Chuck's Supermarket storefront"
-          >
-        </div>
+        <img
+          class="hero-card-image"
+          src="images/02-storefront-evening.jpg"
+          alt="Chuck's Supermarket storefront"
+        >
 
-        <div class="hero-card-content">
+        <h3>
+          Easy everyday shopping
+        </h3>
 
-          <h3>
-            Easy everyday shopping
-          </h3>
+        <p>
+          Discover groceries, drinks, household essentials
+          and everyday products at Chuck's Supermarket.
+        </p>
 
-          <p>
-            Browse popular products, discover the store
-            and get in touch with Chuck's Supermarket.
-          </p>
+        <div class="mini-stats">
 
-          <div class="mini-stats">
+          <div class="mini-stat">
+            <strong>🛍️</strong>
+            <small>Groceries</small>
+          </div>
 
-            <div class="mini-stat">
-              <strong>Groceries</strong>
-              <small>Everyday essentials</small>
-            </div>
+          <div class="mini-stat">
+            <strong>🥤</strong>
+            <small>Drinks</small>
+          </div>
 
-            <div class="mini-stat">
-              <strong>Drinks</strong>
-              <small>Cold beverages</small>
-            </div>
-
-            <div class="mini-stat">
-              <strong>Home</strong>
-              <small>Household needs</small>
-            </div>
-
+          <div class="mini-stat">
+            <strong>🏠</strong>
+            <small>Home</small>
           </div>
 
         </div>
@@ -801,23 +760,16 @@
       </div>
 
     </div>
-
   </header>
 
 
-  <!-- =========================
-       CATEGORIES
-  ========================= -->
-
+  <!-- CATEGORIES -->
   <section class="categories" id="shop">
 
     <div class="container">
 
       <div class="section-title">
-
-        <small>
-          Shop by category
-        </small>
+        <small>Shop by category</small>
 
         <h2>
           Something for every basket
@@ -827,7 +779,6 @@
           From everyday groceries to household essentials,
           find what you need for your home and family.
         </p>
-
       </div>
 
 
@@ -835,17 +786,20 @@
 
         <div class="category">
 
-          <div class="category-image">
-            <img
-              src="images/10-category-rice-and-staples.jpg"
-              alt="Rice and staple groceries"
-              loading="lazy"
-            >
-          </div>
+          <img
+            src="images/10-category-rice-and-staples.jpg"
+            alt="Rice and staples"
+            loading="lazy"
+          >
 
           <div class="category-content">
+
             <h3>Groceries</h3>
-            <p>Rice, cereals, grains and everyday essentials.</p>
+
+            <p>
+              Rice, grains, staples and everyday groceries.
+            </p>
+
           </div>
 
         </div>
@@ -853,17 +807,20 @@
 
         <div class="category">
 
-          <div class="category-image">
-            <img
-              src="images/11-category-chilled-drinks.jpg"
-              alt="Chilled drinks"
-              loading="lazy"
-            >
-          </div>
+          <img
+            src="images/11-category-chilled-drinks.jpg"
+            alt="Chilled drinks"
+            loading="lazy"
+          >
 
           <div class="category-content">
+
             <h3>Drinks</h3>
-            <p>Refreshing drinks and chilled beverages.</p>
+
+            <p>
+              Refreshing drinks and beverages for every occasion.
+            </p>
+
           </div>
 
         </div>
@@ -871,143 +828,43 @@
 
         <div class="category">
 
-          <div class="category-image">
-            <img
-              src="images/09-category-snacks-and-groceries.jpg"
-              alt="Snacks and groceries"
-              loading="lazy"
-            >
-          </div>
-
-          <div class="category-content">
-            <h3>Snacks</h3>
-            <p>Biscuits, treats and quick bites.</p>
-          </div>
-
-        </div>
-
-
-        <div class="category">
-
-          <div class="category-image">
-            <img
-              src="images/08-category-shopping-cart.jpg"
-              alt="Shopping at Chuck's Supermarket"
-              loading="lazy"
-            >
-          </div>
-
-          <div class="category-content">
-            <h3>Household</h3>
-            <p>Useful products for your home and family.</p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       STORE GALLERY
-  ========================= -->
-
-  <section class="gallery" id="gallery">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <small>
-          Inside Chuck's
-        </small>
-
-        <h2>
-          See our store
-        </h2>
-
-        <p>
-          Take a look at the real Chuck's Supermarket
-          and the products available in store.
-        </p>
-
-      </div>
-
-
-      <div class="gallery-grid">
-
-        <div class="gallery-item large">
-          <img
-            src="images/03-shopping-aisle-customer.jpg"
-            alt="Shopping aisle at Chuck's Supermarket"
-            loading="lazy"
-          >
-          <div class="gallery-caption">
-            Shopping aisles
-          </div>
-        </div>
-
-
-        <div class="gallery-item large">
-          <img
-            src="images/04-supermarket-aisle.jpg"
-            alt="Supermarket beverage aisle"
-            loading="lazy"
-          >
-          <div class="gallery-caption">
-            Drinks and beverages
-          </div>
-        </div>
-
-
-        <div class="gallery-item large">
-          <img
-            src="images/05-pharmacy-counter.jpg"
-            alt="Pharmacy counter"
-            loading="lazy"
-          >
-          <div class="gallery-caption">
-            Pharmacy section
-          </div>
-        </div>
-
-
-        <div class="gallery-item">
           <img
             src="images/06-store-counter-interior.jpg"
-            alt="Chuck's Supermarket counter"
+            alt="Supermarket interior"
             loading="lazy"
           >
-          <div class="gallery-caption">
-            Store counter
+
+          <div class="category-content">
+
+            <h3>Household</h3>
+
+            <p>
+              Everyday household and home essentials.
+            </p>
+
           </div>
+
         </div>
 
 
-        <div class="gallery-item">
+        <div class="category">
+
           <img
-            src="images/07-beverages-and-drinks-aisle.jpg"
-            alt="Beverages and drinks aisle"
+            src="images/09-category-snacks-and-groceries.jpg"
+            alt="Snacks and groceries"
             loading="lazy"
           >
-          <div class="gallery-caption">
-            Beverages
-          </div>
-        </div>
 
+          <div class="category-content">
 
-        <div class="gallery-item">
-          <img
-            src="images/12-category-beverages-display.jpg"
-            alt="Beverage display"
-            loading="lazy"
-          >
-          <div class="gallery-caption">
-            Beverage display
+            <h3>Snacks</h3>
+
+            <p>
+              Biscuits, treats, snacks and quick bites.
+            </p>
+
           </div>
+
         </div>
 
       </div>
@@ -1017,27 +874,22 @@
   </section>
 
 
-  <!-- =========================
-       FEATURED PRODUCTS
-  ========================= -->
-
+  <!-- PRODUCTS -->
   <section class="products">
 
     <div class="container">
 
       <div class="section-title">
 
-        <small>
-          Popular picks
-        </small>
+        <small>Popular picks</small>
 
         <h2>
           Featured products
         </h2>
 
         <p>
-          A sample selection of everyday products available
-          at Chuck's Supermarket.
+          Browse a sample selection of everyday products
+          available at Chuck's Supermarket.
         </p>
 
       </div>
@@ -1045,20 +897,104 @@
 
       <div class="product-grid">
 
+
         <div class="product">
 
           <div class="product-img">
             <img
               src="images/10-category-rice-and-staples.jpg"
-              alt="Rice and staple groceries"
+              alt="Rice and staples"
               loading="lazy"
             >
           </div>
 
           <div class="product-info">
+
             <small>Groceries</small>
+
             <h3>Rice & Staples</h3>
-            <div class="price">Ask for price</div>
+
+            <div class="price">
+              Ask for price
+            </div>
+
+            <a
+              class="order-btn"
+              href="https://wa.me/2348000000000?text=Hello%20Chuck%27s%20Supermarket%2C%20I%27m%20interested%20in%20Rice%20and%20Staples."
+              target="_blank"
+              rel="noopener"
+            >
+              💬 Ask on WhatsApp
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="product">
+
+          <div class="product-img">
+            <img
+              src="images/11-category-chilled-drinks.jpg"
+              alt="Chilled drinks"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-info">
+
+            <small>Beverages</small>
+
+            <h3>Chilled Drinks</h3>
+
+            <div class="price">
+              Ask for price
+            </div>
+
+            <a
+              class="order-btn"
+              href="https://wa.me/2348000000000?text=Hello%20Chuck%27s%20Supermarket%2C%20I%27m%20interested%20in%20Chilled%20Drinks."
+              target="_blank"
+              rel="noopener"
+            >
+              💬 Ask on WhatsApp
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="product">
+
+          <div class="product-img">
+            <img
+              src="images/09-category-snacks-and-groceries.jpg"
+              alt="Snacks and groceries"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-info">
+
+            <small>Snacks</small>
+
+            <h3>Snacks & Biscuits</h3>
+
+            <div class="price">
+              Ask for price
+            </div>
+
+            <a
+              class="order-btn"
+              href="https://wa.me/2348000000000?text=Hello%20Chuck%27s%20Supermarket%2C%20I%27m%20interested%20in%20Snacks%20and%20Biscuits."
+              target="_blank"
+              rel="noopener"
+            >
+              💬 Ask on WhatsApp
+            </a>
+
           </div>
 
         </div>
@@ -1069,231 +1005,499 @@
           <div class="product-img">
             <img
               src="images/12-category-beverages-display.jpg"
-              alt="Beverages"
+              alt="Beverages display"
               loading="lazy"
-                 <div class="product-info">
+            >
+          </div>
+
+          <div class="product-info">
+
             <small>Beverages</small>
+
             <h3>Beverages & Drinks</h3>
-            <div class="price">Ask for price</div>
-        </div>
 
-    </div>
-</div>
-
-
-<!-- =========================
-     ABOUT
-========================= -->
-<section class="about" id="about">
-
-    <div class="container">
-
-        <div class="about-grid">
-
-            <div class="about-box">
-                🛒
+            <div class="price">
+              Ask for price
             </div>
 
-            <div>
+            <a
+              class="order-btn"
+              href="https://wa.me/2348000000000?text=Hello%20Chuck%27s%20Supermarket%2C%20I%27m%20interested%20in%20Beverages%20and%20Drinks."
+              target="_blank"
+              rel="noopener"
+            >
+              💬 Ask on WhatsApp
+            </a>
 
-                <small
-                    style="
-                    color:#16733b;
-                    font-weight:800;
-                    letter-spacing:2px;
-                    "
-                >
-                    ABOUT CHUCK'S
-                </small>
-
-                <h2>
-                    Your everyday shopping made simpler.
-                </h2>
-
-                <p>
-                    Chuck's Supermarket is a convenient shopping
-                    destination for customers in Lokoja, offering
-                    groceries, beverages, household essentials and
-                    everyday products.
-                </p>
-
-                <p>
-                    Our goal is to make everyday shopping simple,
-                    convenient and enjoyable for everyone.
-                </p>
-
-                <div class="check">
-                    <span>✓</span>
-                    Convenient everyday shopping
-                </div>
-
-                <div class="check">
-                    <span>✓</span>
-                    Groceries and household essentials
-                </div>
-
-                <div class="check">
-                    <span>✓</span>
-                    Drinks and beverages
-                </div>
-
-                <div class="check">
-                    <span>✓</span>
-                    Friendly customer service
-                </div>
-
-            </div>
+          </div>
 
         </div>
 
-    </div>
 
-</section>
+        <div class="product">
+
+          <div class="product-img">
+            <img
+              src="images/08-category-shopping-cart.jpg"
+              alt="Shopping cart"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-info">
+
+            <small>Shopping</small>
+
+            <h3>Everyday Essentials</h3>
+
+            <div class="price">
+              Ask for price
+            </div>
+
+            <a
+              class="order-btn"
+              href="https://wa.me/2348000000000?text=Hello%20Chuck%27s%20Supermarket%2C%20I%27m%20interested%20in%20Everyday%20Essentials."
+              target="_blank"
+              rel="noopener"
+            >
+              💬 Ask on WhatsApp
+            </a>
+
+          </div>
+
+        </div>
 
 
-<!-- =========================
-     CALL TO ACTION
-========================= -->
-<section class="cta">
+        <div class="product">
 
-    <div class="container">
+          <div class="product-img">
+            <img
+              src="images/07-beverages-and-drinks-aisle.jpg"
+              alt="Beverages and drinks aisle"
+              loading="lazy"
+            >
+          </div>
+                <div class="product-info">
+                  <small>Beverages</small>
+                  <h3>Beverages & Drinks</h3>
+                  <div class="price">Ask for price</div>
+                </div>
+              </div>
 
-        <h2>
-            Ready to shop?
-        </h2>
+              <div class="product">
+                <div class="product-img">
+                  <img
+                    src="images/08-category-shopping-cart.jpg"
+                    alt="Shopping cart"
+                    loading="lazy"
+                  >
+                </div>
+                <div class="product-info">
+                  <small>Groceries</small>
+                  <h3>Everyday Shopping</h3>
+                  <div class="price">Ask for price</div>
+                </div>
+              </div>
 
-        <p>
-            Visit Chuck's Supermarket for your everyday
-            groceries, drinks, household essentials and more.
-        </p>
+              <div class="product">
+                <div class="product-img">
+                  <img
+                    src="images/09-category-snacks-and-groceries.jpg"
+                    alt="Snacks and groceries"
+                    loading="lazy"
+                  >
+                </div>
+                <div class="product-info">
+                  <small>Groceries</small>
+                  <h3>Snacks & Groceries</h3>
+                  <div class="price">Ask for price</div>
+                </div>
+              </div>
 
-        <a
-            href="#contact"
-            class="btn btn-secondary"
-        >
-            Contact Chuck's →
-        </a>
+              <div class="product">
+                <div class="product-img">
+                  <img
+                    src="images/10-category-rice-and-staples.jpg"
+                    alt="Rice and staple groceries"
+                    loading="lazy"
+                  >
+                </div>
+                <div class="product-info">
+                  <small>Groceries</small>
+                  <h3>Rice & Staples</h3>
+                  <div class="price">Ask for price</div>
+                </div>
+              </div>
 
-    </div>
+              <div class="product">
+                <div class="product-img">
+                  <img
+                    src="images/11-category-chilled-drinks.jpg"
+                    alt="Chilled drinks"
+                    loading="lazy"
+                  >
+                </div>
+                <div class="product-info">
+                  <small>Beverages</small>
+                  <h3>Chilled Drinks</h3>
+                  <div class="price">Ask for price</div>
+                </div>
+              </div>
 
-</section>
+              <div class="product">
+                <div class="product-img">
+                  <img
+                    src="images/12-category-beverages-display.jpg"
+                    alt="Beverages display"
+                    loading="lazy"
+                  >
+                </div>
+                <div class="product-info">
+                  <small>Beverages</small>
+                  <h3>Beverages & Drinks</h3>
+                  <div class="price">Ask for price</div>
+                </div>
+              </div>
 
+            </div>
+          </div>
+        </section>
 
-<!-- =========================
-     CONTACT
-========================= -->
-<section class="contact" id="contact">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <small>
-                GET IN TOUCH
-            </small>
-
-            <h2>
-                We'd love to hear from you.
-            </h2>
-
+        <!-- ABOUT / STORE INFORMATION -->
+        <section class="about-section" id="about">
+          <div class="section-heading">
+            <span>ABOUT CHUCK'S</span>
+            <h2>Your neighbourhood supermarket</h2>
             <p>
-                Have a question about a product or want to
-                visit Chuck's Supermarket? Get in touch with us.
+              A convenient place to shop for everyday groceries, drinks,
+              chilled products, snacks, household essentials and more.
             </p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-image">
+              <img
+                src="images/02-storefront-evening.jpg"
+                alt="Chuck's Supermarket storefront"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="about-content">
+              <h3>Everything you need, in one place.</h3>
+              <p>
+                Browse our supermarket concept online and discover some of
+                the products and departments available at Chuck's.
+              </p>
+
+              <p>
+                This website is currently a portfolio concept created to
+                demonstrate how Chuck's Supermarket could present its store
+                and products online.
+              </p>
+
+              <div class="about-features">
+                <div>
+                  <strong>🛒</strong>
+                  <span>Everyday groceries</span>
+                </div>
+
+                <div>
+                  <strong>🥤</strong>
+                  <span>Drinks & beverages</span>
+                </div>
+
+                <div>
+                  <strong>🍚</strong>
+                  <span>Rice & staples</span>
+                </div>
+
+                <div>
+                  <strong>🍫</strong>
+                  <span>Snacks & essentials</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT / ORDER SECTION -->
+        <section class="contact-section" id="contact">
+          <div class="section-heading">
+            <span>GET IN TOUCH</span>
+            <h2>Need something from the store?</h2>
+            <p>
+              Contact Chuck's Supermarket through WhatsApp for enquiries,
+              product availability and shopping assistance.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+
+            <div class="contact-card">
+              <div class="contact-icon">💬</div>
+              <h3>WhatsApp</h3>
+              <p>
+                Send us a message on WhatsApp to ask about products,
+                availability or your shopping needs.
+              </p>
+
+              <!-- CONCEPT NUMBER - REPLACE WHEN MANAGER PROVIDES REAL NUMBER -->
+              <a
+                href="https://wa.me/2340000000000"
+                class="contact-button"
+                target="_blank"
+                rel="noopener"
+              >
+                Chat on WhatsApp
+              </a>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon">📍</div>
+              <h3>Visit the Store</h3>
+              <p>
+                Come to Chuck's Supermarket and shop directly in-store.
+              </p>
+
+              <a
+                href="#location"
+                class="contact-button secondary"
+              >
+                View Location
+              </a>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon">🛍️</div>
+              <h3>Product Enquiries</h3>
+              <p>
+                See something you want? Contact us to confirm availability
+                and get more information.
+              </p>
+
+              <a
+                href="https://wa.me/2340000000000"
+                class="contact-button"
+                target="_blank"
+                rel="noopener"
+              >
+                Ask About a Product
+              </a>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- LOCATION / MAP -->
+        <section class="location-section" id="location">
+          <div class="section-heading">
+            <span>OUR LOCATION</span>
+            <h2>Find Chuck's Supermarket</h2>
+            <p>
+              Tap the map to open the location in Google Maps and get
+              directions to the store.
+            </p>
+          </div>
+
+          <div class="location-card">
+
+            <div class="location-info">
+              <div class="location-icon">📍</div>
+
+              <h3>Chuck's Supermarket</h3>
+
+              <!-- CONCEPT ADDRESS - REPLACE WITH VERIFIED ADDRESS -->
+              <p>
+                Chuck's Supermarket<br>
+                Store Address / Location<br>
+                Nigeria
+              </p>
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Chuck%27s%20Supermarket"
+                target="_blank"
+                rel="noopener"
+                class="contact-button"
+              >
+                Open in Google Maps
+              </a>
+            </div>
+
+            <div class="map-container">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Chuck%27s%20Supermarket"
+                target="_blank"
+                rel="noopener"
+                aria-label="Open Chuck's Supermarket location in Google Maps"
+              >
+                <div class="map-placeholder">
+                  <div class="map-pin">📍</div>
+                  <h3>Chuck's Supermarket</h3>
+                  <p>Tap to open Google Maps</p>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- WHY SHOP WITH US -->
+        <section class="why-section">
+          <div class="section-heading">
+            <span>WHY SHOP WITH US</span>
+            <h2>Simple, convenient shopping</h2>
+          </div>
+
+          <div class="why-grid">
+
+            <div class="why-card">
+              <div class="why-icon">🛒</div>
+              <h3>Wide Selection</h3>
+              <p>
+                Browse groceries, beverages, snacks, chilled products and
+                everyday essentials.
+              </p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-icon">📱</div>
+              <h3>Easy Enquiries</h3>
+              <p>
+                Use WhatsApp to ask about products and availability before
+                visiting the store.
+              </p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-icon">📍</div>
+              <h3>Easy to Find</h3>
+              <p>
+                Use the location section to open Google Maps and get
+                directions to the supermarket.
+              </p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-icon">⭐</div>
+              <h3>Local Shopping</h3>
+              <p>
+                A convenient supermarket concept designed around everyday
+                customer needs.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer-content">
+
+          <div class="footer-brand">
+            <h2>Chuck's Supermarket</h2>
+            <p>
+              Your neighbourhood destination for groceries, beverages,
+              snacks and everyday essentials.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#location">Location</a>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contact</h3>
+
+            <a
+              href="https://wa.me/2340000000000"
+              target="_blank"
+              rel="noopener"
+            >
+              WhatsApp
+            </a>
+
+            <a href="#location">
+              Store Location
+            </a>
+          </div>
 
         </div>
 
+        <div class="footer-bottom">
+          <p>
+            © 2026 Chuck's Supermarket. All rights reserved.
+          </p>
 
-        <div class="contact-grid">
-
-
-            <div class="contact-card">
-
-                <div class="icon">
-                    📍
-                </div>
-
-                <h3>
-                    Location
-                </h3>
-
-                <p>
-                    Lokoja, Kogi State, Nigeria
-                </p>
-
-            </div>
-
-
-            <div class="contact-card">
-
-                <div class="icon">
-                    🛒
-                </div>
-
-                <h3>
-                    Visit Us
-                </h3>
-
-                <p>
-                    Stop by Chuck's Supermarket for
-                    your everyday shopping needs.
-                </p>
-
-            </div>
-
-
-            <div class="contact-card">
-
-                <div class="icon">
-                    💬
-                </div>
-
-                <h3>
-                    Enquiries
-                </h3>
-
-                <p>
-                    Contact the store for product
-                    availability and prices.
-                </p>
-
-            </div>
-
+          <p>
+            Website concept & portfolio project.
+          </p>
         </div>
+      </footer>
 
     </div>
 
-</section>
+    <script>
+      // Mobile menu
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navMenu = document.querySelector(".nav-menu");
 
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", () => {
+          navMenu.classList.toggle("active");
+          menuToggle.classList.toggle("active");
+        });
 
-<!-- =========================
-     FOOTER
-========================= -->
-<footer>
+        document.querySelectorAll(".nav-menu a").forEach(link => {
+          link.addEventListener("click", () => {
+            navMenu.classList.remove("active");
+            menuToggle.classList.remove("active");
+          });
+        });
+      }
 
-    <div class="footer-inner">
+      // Product search
+      const searchInput = document.querySelector("#product-search");
+      const products = document.querySelectorAll(".product");
 
-        <div>
-            <strong>
-                Chuck's Supermarket
-            </strong>
+      if (searchInput && products.length) {
+        searchInput.addEventListener("input", function () {
+          const searchValue = this.value.toLowerCase().trim();
 
-            <br>
+          products.forEach(product => {
+            const text = product.textContent.toLowerCase();
 
-            <span>
-                Your everyday shopping destination.
-            </span>
-        </div>
+            product.style.display =
+              text.includes(searchValue) ? "" : "none";
+          });
+        });
+      }
 
-        <div>
-            © 2026 Chuck's Supermarket.
-            All rights reserved.
-        </div>
+      // Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (event) {
+          const target = document.querySelector(this.getAttribute("href"));
 
-    </div>
+          if (target) {
+            event.preventDefault();
 
-</footer>
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+          }
+        });
+      });
+    </script>
 
-
-</body>
-    </html>
+  </body>
+                    </html>
+        
