@@ -6,7 +6,10 @@
 
   <title>Chuck's Supermarket | Lokoja</title>
 
-  <meta name="description" content="Chuck's Supermarket — quality groceries, household essentials and everyday shopping in Lokoja.">
+  <meta
+    name="description"
+    content="Chuck's Supermarket — quality groceries, household essentials, drinks and everyday shopping in Lokoja, Kogi State."
+  >
 
   <style>
     * {
@@ -28,14 +31,21 @@
       color: inherit;
     }
 
-    /* NAVIGATION */
+    button {
+      font-family: inherit;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
     nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(255,255,255,0.96);
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid #e5e9e4;
     }
@@ -73,18 +83,33 @@
 
     .nav-btn {
       background: #16733b;
-      color: white;
+      color: white !important;
       padding: 10px 17px;
       border-radius: 25px;
     }
 
-    /* HERO */
+    .nav-btn:hover {
+      background: #0f5d2e;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
     .hero {
       min-height: 720px;
       padding: 150px 22px 80px;
       background:
-        linear-gradient(110deg, rgba(10,55,27,.94), rgba(22,115,59,.82)),
-        radial-gradient(circle at right, #f4b942, transparent 35%);
+        linear-gradient(
+          110deg,
+          rgba(10, 55, 27, 0.96),
+          rgba(22, 115, 59, 0.84)
+        ),
+        radial-gradient(
+          circle at right,
+          #f4b942,
+          transparent 35%
+        );
       color: white;
       display: flex;
       align-items: center;
@@ -95,15 +120,15 @@
       max-width: 1150px;
       margin: auto;
       display: grid;
-      grid-template-columns: 1.1fr .9fr;
+      grid-template-columns: 1.1fr 0.9fr;
       gap: 60px;
       align-items: center;
     }
 
     .badge {
       display: inline-block;
-      background: rgba(255,255,255,.13);
-      border: 1px solid rgba(255,255,255,.25);
+      background: rgba(255, 255, 255, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.25);
       padding: 8px 14px;
       border-radius: 30px;
       font-size: 13px;
@@ -139,7 +164,7 @@
       padding: 14px 23px;
       border-radius: 8px;
       font-weight: 700;
-      transition: .2s;
+      transition: 0.2s;
     }
 
     .btn-primary {
@@ -148,7 +173,7 @@
     }
 
     .btn-secondary {
-      border: 1px solid rgba(255,255,255,.4);
+      border: 1px solid rgba(255, 255, 255, 0.4);
       color: white;
     }
 
@@ -157,8 +182,8 @@
     }
 
     .hero-card {
-      background: rgba(255,255,255,.1);
-      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
       padding: 28px;
       border-radius: 24px;
       backdrop-filter: blur(12px);
@@ -182,13 +207,13 @@
 
     .mini-stats {
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
       margin-top: 25px;
     }
 
     .mini-stat {
-      background: rgba(0,0,0,.13);
+      background: rgba(0, 0, 0, 0.13);
       padding: 14px 8px;
       border-radius: 12px;
       text-align: center;
@@ -203,7 +228,10 @@
       color: #d8e8dc;
     }
 
-    /* SECTIONS */
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
     section {
       padding: 90px 22px;
     }
@@ -235,14 +263,17 @@
       color: #68716b;
     }
 
-    /* CATEGORIES */
+    /* =========================
+       CATEGORIES
+    ========================= */
+
     .categories {
       background: white;
     }
 
     .category-grid {
       display: grid;
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 18px;
     }
 
@@ -252,12 +283,13 @@
       border: 1px solid #e5ebe5;
       border-radius: 16px;
       text-align: center;
-      transition: .25s;
+      transition: 0.25s;
     }
 
     .category:hover {
       transform: translateY(-6px);
       border-color: #b7d8c0;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
     }
 
     .category-icon {
@@ -280,14 +312,17 @@
       font-size: 13px;
     }
 
-    /* PRODUCTS */
+    /* =========================
+       PRODUCTS
+    ========================= */
+
     .products {
       background: #f7f8f5;
     }
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 18px;
     }
 
@@ -296,19 +331,23 @@
       border: 1px solid #e6e9e6;
       border-radius: 16px;
       overflow: hidden;
-      transition: .25s;
+      transition: 0.25s;
     }
 
     .product:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0,0,0,.07);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
     }
 
     .product-img {
       height: 175px;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg,#e7f4e9,#fff3d9);
+      background: linear-gradient(
+        135deg,
+        #e7f4e9,
+        #fff3d9
+      );
       font-size: 70px;
     }
 
@@ -331,7 +370,10 @@
       font-size: 18px;
     }
 
-    /* ABOUT */
+    /* =========================
+       ABOUT
+    ========================= */
+
     .about {
       background: white;
     }
@@ -373,7 +415,10 @@
       color: #16733b;
     }
 
-    /* CTA */
+    /* =========================
+       CTA
+    ========================= */
+
     .cta {
       background: #176f39;
       color: white;
@@ -391,14 +436,17 @@
       color: #dcecdf;
     }
 
-    /* CONTACT */
+    /* =========================
+       CONTACT
+    ========================= */
+
     .contact {
       background: #f7f8f5;
     }
 
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
@@ -408,6 +456,12 @@
       border-radius: 16px;
       padding: 28px;
       text-align: center;
+      transition: 0.2s;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
     }
 
     .contact-card .icon {
@@ -424,7 +478,10 @@
       font-size: 14px;
     }
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
       background: #102017;
       color: #aebbb2;
@@ -444,8 +501,12 @@
       color: white;
     }
 
-    /* MOBILE */
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 800px) {
+
       .nav-links {
         display: none;
       }
@@ -465,11 +526,11 @@
       }
 
       .category-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .product-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .contact-grid {
@@ -483,6 +544,7 @@
     }
 
     @media (max-width: 480px) {
+
       .product-grid {
         grid-template-columns: 1fr;
       }
@@ -502,16 +564,30 @@
       .mini-stats {
         grid-template-columns: 1fr;
       }
+
+      .hero-card {
+        padding: 22px;
+      }
+
+      section {
+        padding: 70px 18px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
   <nav>
     <div class="nav-inner">
-      <a href="#" class="logo">Chuck's<span>.</span></a>
+
+      <a href="#" class="logo">
+        Chuck's<span>.</span>
+      </a>
 
       <div class="nav-links">
         <a href="#shop">Shop</a>
@@ -519,15 +595,24 @@
         <a href="#contact">Contact</a>
         <a href="#contact" class="nav-btn">Order Now</a>
       </div>
+
     </div>
   </nav>
 
-  <!-- HERO -->
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
   <header class="hero">
+
     <div class="hero-inner">
 
       <div>
-        <div class="badge">📍 Lokoja, Kogi State</div>
+
+        <div class="badge">
+          📍 Lokoja, Kogi State
+        </div>
 
         <h1>
           Everything you need.<br>
@@ -535,27 +620,43 @@
         </h1>
 
         <p>
-          Welcome to Chuck's Supermarket — your convenient destination
-          for groceries, household essentials, drinks and everyday shopping.
+          Welcome to Chuck's Supermarket — your convenient
+          destination for groceries, household essentials,
+          drinks and everyday shopping.
         </p>
 
         <div class="hero-buttons">
-          <a href="#shop" class="btn btn-primary">Explore Products →</a>
-          <a href="#contact" class="btn btn-secondary">Contact Us</a>
+
+          <a href="#shop" class="btn btn-primary">
+            Explore Products →
+          </a>
+
+          <a href="#contact" class="btn btn-secondary">
+            Contact Us
+          </a>
+
         </div>
+
       </div>
 
-      <div class="hero-card">
-        <div class="basket">🛒</div>
 
-        <h3>Easy everyday shopping</h3>
+      <div class="hero-card">
+
+        <div class="basket">
+          🛒
+        </div>
+
+        <h3>
+          Easy everyday shopping
+        </h3>
 
         <p>
-          Browse popular products, discover great deals and
-          get in touch with Chuck's Supermarket.
+          Browse popular products, discover great deals
+          and get in touch with Chuck's Supermarket.
         </p>
 
         <div class="mini-stats">
+
           <div class="mini-stat">
             <strong>🛍️</strong>
             <small>Groceries</small>
@@ -570,112 +671,258 @@
             <strong>🏠</strong>
             <small>Home</small>
           </div>
+
         </div>
+
       </div>
 
     </div>
+
   </header>
 
-  <!-- CATEGORIES -->
+
+  <!-- =========================
+       CATEGORIES
+  ========================= -->
+
   <section class="categories" id="shop">
+
     <div class="container">
 
       <div class="section-title">
-        <small>Shop by category</small>
-        <h2>Something for every basket</h2>
+
+        <small>
+          Shop by category
+        </small>
+
+        <h2>
+          Something for every basket
+        </h2>
+
         <p>
           From everyday groceries to household essentials,
           find what you need for your home and family.
         </p>
+
       </div>
+
 
       <div class="category-grid">
 
         <div class="category">
-          <div class="category-icon">🍚</div>
-          <h3>Groceries</h3>
-          <p>Rice, cereals, grains and more.</p>
+
+          <div class="category-icon">
+            🍚
+          </div>
+
+          <h3>
+            Groceries
+          </h3>
+
+          <p>
+            Rice, cereals, grains and more.
+          </p>
+
         </div>
 
-        <div class="category">
-          <div class="category-icon">🥤</div>
-          <h3>Drinks</h3>
-          <p>Refreshing drinks and beverages.</p>
-        </div>
 
         <div class="category">
-          <div class="category-icon">🧼</div>
-          <h3>Home Care</h3>
-          <p>Cleaning and household essentials.</p>
+
+          <div class="category-icon">
+            🥤
+          </div>
+
+          <h3>
+            Drinks
+          </h3>
+
+          <p>
+            Refreshing drinks and beverages.
+          </p>
+
         </div>
 
+
         <div class="category">
-          <div class="category-icon">🍪</div>
-          <h3>Snacks</h3>
-          <p>Biscuits, treats and quick bites.</p>
+
+          <div class="category-icon">
+            🧼
+          </div>
+
+          <h3>
+            Home Care
+          </h3>
+
+          <p>
+            Cleaning and household essentials.
+          </p>
+
+        </div>
+
+
+        <div class="category">
+
+          <div class="category-icon">
+            🍪
+          </div>
+
+          <h3>
+            Snacks
+          </h3>
+
+          <p>
+            Biscuits, treats and quick bites.
+          </p>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
-  <!-- PRODUCTS -->
+
+  <!-- =========================
+       PRODUCTS
+  ========================= -->
+
   <section class="products">
+
     <div class="container">
 
       <div class="section-title">
-        <small>Popular picks</small>
-        <h2>Featured products</h2>
+
+        <small>
+          Popular picks
+        </small>
+
+        <h2>
+          Featured products
+        </h2>
+
         <p>
           A sample selection of everyday products available
           at Chuck's Supermarket.
         </p>
+
       </div>
+
 
       <div class="product-grid">
 
         <div class="product">
-          <div class="product-img">🍚</div>
-          <div class="product-info">
-            <small>Groceries</small>
-            <h3>Premium Rice</h3>
-            <div class="price">Ask for price</div>
+
+          <div class="product-img">
+            🍚
           </div>
+
+          <div class="product-info">
+
+            <small>
+              Groceries
+            </small>
+
+            <h3>
+              Premium Rice
+            </h3>
+
+            <div class="price">
+              Ask for price
+            </div>
+
+          </div>
+
         </div>
 
-        <div class="product">
-          <div class="product-img">🥤</div>
-          <div class="product-info">
-            <small>Beverages</small>
-            <h3>Soft Drinks</h3>
-            <div class="price">Ask for price</div>
-          </div>
-        </div>
 
         <div class="product">
-          <div class="product-img">🧼</div>
-          <div class="product-info">
-            <small>Home Care</small>
-            <h3>Cleaning Essentials</h3>
-            <div class="price">Ask for price</div>
+
+          <div class="product-img">
+            🥤
           </div>
+
+          <div class="product-info">
+
+            <small>
+              Beverages
+            </small>
+
+            <h3>
+              Soft Drinks
+            </h3>
+
+            <div class="price">
+              Ask for price
+            </div>
+
+          </div>
+
         </div>
 
+
         <div class="product">
-          <div class="product-img">🍪</div>
-          <div class="product-info">
-            <small>Snacks</small>
-            <h3>Biscuits & Snacks</h3>
-            <div class="price">Ask for price</div>
+
+          <div class="product-img">
+            🧼
           </div>
+
+          <div class="product-info">
+
+            <small>
+              Home Care
+            </small>
+
+            <h3>
+              Cleaning Essentials
+            </h3>
+
+            <div class="price">
+              Ask for price
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="product">
+
+          <div class="product-img">
+            🍪
+          </div>
+
+          <div class="product-info">
+
+            <small>
+              Snacks
+            </small>
+
+            <h3>
+              Biscuits & Snacks
+            </h3>
+
+            <div class="price">
+              Ask for price
+            </div>
+
+          </div>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
-  <!-- ABOUT -->
+
+  <!-- =========================
+       ABOUT
+  ========================= -->
+
   <section class="about" id="about">
+
     <div class="container">
 
       <div class="about-grid">
@@ -684,8 +931,16 @@
           🛒
         </div>
 
+
         <div>
-          <small style="color:#16733b;font-weight:800;letter-spacing:2px;">
+
+          <small
+            style="
+              color:#16733b;
+              font-weight:800;
+              letter-spacing:2px;
+            "
+          >
             ABOUT CHUCK'S
           </small>
 
@@ -695,37 +950,52 @@
 
           <p>
             Chuck's Supermarket is presented as a modern,
-            convenient shopping destination for customers in Lokoja.
+            convenient shopping destination for customers
+            in Lokoja.
           </p>
 
           <p>
-            This website makes it easier for customers to discover
-            products, learn about the store and get in touch.
+            This website makes it easier for customers
+            to discover products, learn about the store
+            and get in touch.
           </p>
 
+
           <div class="check">
-            <span>✓</span> Convenient everyday shopping
+            <span>✓</span>
+            Convenient everyday shopping
           </div>
 
           <div class="check">
-            <span>✓</span> Groceries and household essentials
+            <span>✓</span>
+            Groceries and household essentials
           </div>
 
           <div class="check">
-            <span>✓</span> Friendly customer service
+            <span>✓</span>
+            Friendly customer service
           </div>
 
         </div>
 
       </div>
+
     </div>
+
   </section>
 
-  <!-- CTA -->
+
+  <!-- =========================
+       CALL TO ACTION
+  ========================= -->
+
   <section class="cta">
+
     <div class="container">
 
-      <h2>Ready to shop?</h2>
+      <h2>
+        Ready to shop?
+      </h2>
 
       <p>
         Get in touch with Chuck's Supermarket for product
@@ -737,57 +1007,122 @@
       </a>
 
     </div>
+
   </section>
 
-  <!-- CONTACT -->
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
+
   <section class="contact" id="contact">
+
     <div class="container">
 
       <div class="section-title">
-        <small>Get in touch</small>
-        <h2>Visit or contact us</h2>
+
+        <small>
+          Get in touch
+        </small>
+
+        <h2>
+          Visit or contact us
+        </h2>
+
         <p>
           We're here to make your everyday shopping easier.
         </p>
+
       </div>
+
 
       <div class="contact-grid">
 
         <div class="contact-card">
-          <div class="icon">📍</div>
-          <h3>Location</h3>
-          <p>Lokoja, Kogi State, Nigeria</p>
+
+          <div class="icon">
+            📍
+          </div>
+
+          <h3>
+            Location
+          </h3>
+
+          <p>
+            Lokoja, Kogi State, Nigeria
+          </p>
+
         </div>
 
-        <div class="contact-card">
-          <div class="icon">📞</div>
-          <h3>Phone</h3>
-          <p>Contact the store for enquiries and orders.</p>
-        </div>
 
         <div class="contact-card">
-          <div class="icon">💬</div>
-          <h3>WhatsApp</h3>
-          <p>Message Chuck's Supermarket directly.</p>
+
+          <div class="icon">
+            📞
+          </div>
+
+          <h3>
+            Phone
+          </h3>
+
+          <p>
+            Contact the store for enquiries and orders.
+          </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+          <div class="icon">
+            💬
+          </div>
+
+          <h3>
+            WhatsApp
+          </h3>
+
+          <p>
+            Message Chuck's Supermarket directly.
+          </p>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
-  <!-- FOOTER -->
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
+
     <div class="footer-inner">
+
       <div>
-        <strong>Chuck's Supermarket</strong><br>
+        <strong>
+          Chuck's Supermarket
+        </strong>
+
+        <br>
+
         Lokoja, Kogi State
       </div>
 
+
       <div>
-        © 2026 Chuck's Supermarket. All rights reserved.
+        © 2026 Chuck's Supermarket.
+        All rights reserved.
       </div>
+
     </div>
+
   </footer>
+
 
 </body>
   </html>
